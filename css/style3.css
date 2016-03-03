@@ -1,0 +1,794 @@
+html, body{
+	margin: 0;
+	height: 100%;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 18px;
+}	
+
+h1{
+	font-size: 1.944em!important;
+}
+
+#pinContainer {
+	width: 100%;
+	height: 100%;
+	background: blue;
+	overflow: hidden;
+}
+.panel {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	display: flex;
+}
+h1{
+	text-align: center;
+	top: 50%;
+	margin: auto;
+}
+
+.intro{
+	background-color: #1B1E2E;
+	color: white;
+	z-index: 100;
+}
+
+.about{
+	background-color: #EFEFEF;
+	color: red;
+}
+
+
+
+
+.intro-box{
+	position: absolute;
+	/*background-color: #EFEFEF;*/
+	width: 900px;
+	height: 600px;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.intro-box-line{
+	background-color: white;
+	position: absolute;
+}
+
+
+.horizontal{
+	height: 4px;
+	width: 100%;
+	animation: horizontal-line .5s 1;
+}
+
+.vertical{
+	width: 4px;
+	height: 100%;
+	animation: vertical-line 1s 1;
+	
+}
+
+.parens{
+	height: 150px;
+	width: 115px;
+	margin-bottom: 60px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+.light{
+	font-weight: 100;
+}
+
+h1{
+	font-size: 35px;
+	letter-spacing: 11.11px;
+}
+
+h1.name{
+	color: white;
+	animation: name-appear 3.5s 1 ;
+}
+
+hr.name-line{
+	width: 150px;
+	border-width: 1px;
+	border-color: #FF4E6F;
+	margin-bottom: 60px;
+	animation: name-line 2.5s 1;
+}
+
+.parens svg{
+	height: 100%;
+	margin: 0 auto;
+	stroke: white;
+}
+
+.parens svg path{
+	/*stroke-dasharray: 140;
+	stroke-dashoffset: -454;*/
+	stroke-dasharray: 1107.41px, 1107.41px; 
+	animation: parens-animation 2s;	
+}
+
+.intro-box-line.top{
+	top: 0px;
+	right: 0px;
+}
+
+.intro-box-line.down{
+	bottom: 0px;	
+}
+
+.intro-box-line.right{
+	right: 0px;
+	bottom: 0px;
+}
+
+.intro-box-line.left{
+	left: 0px;
+	top: 0px;
+}
+
+
+@keyframes vertical-line{
+	0%{
+		height: 0;
+	}
+	50%{
+		height: 0;
+	}
+	100%{
+		height: 100%;
+	}
+}
+
+@keyframes horizontal-line{
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+@keyframes parens-animation{
+	0%{
+		stroke-dashoffset: -1107px;
+	}
+	50%{
+		stroke-dashoffset: -1107px;
+	}
+	100%{
+		stroke-dashoffset: 0px;
+	}
+}
+
+@keyframes name-line{
+	0%{
+		width: 0px;
+		/*border-width: 0px;*/
+		border-color: #1B1E2E;
+	}
+	50%{
+		width: 0px;
+		border-color: #1B1E2E;
+	}
+	100%{
+		width: 150px;
+	}
+}
+
+@keyframes name-appear {
+	0%{
+		color: #1B1E2E;
+	}
+	50%{
+		color: #1B1E2E;
+	}
+	100%{
+		color: white;
+	}
+}
+
+
+/************ ABOUT ME ***************/
+
+.about{
+}
+
+.about-title{
+	color: #D54664;
+	position: absolute;
+	top: 100px;
+	right: 100px;
+}
+
+.about-content{
+	width: 1000px;
+	height: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 10;
+}
+
+.pink-box{
+	border: 5px solid #D54664;
+	position: absolute;
+	background-color: #EFEFEF;
+	width: 40%;
+	height: 85%;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 9;
+}
+
+.parima-photo{
+	position: relative;
+	width: 520px;
+	height: 550px;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	opacity: 1;
+	box-shadow: 0px 64px 72px 12px rgba(101,97,97,0.50);
+	background: #D54664;
+	 background-image: url('../img/parima-pic.jpg');
+	 background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+.parima-info{
+	position: absolute;
+	background: yellow;
+	width: 600px;
+	height: 500px;
+	bottom: 0;
+	right: 0;
+	index: 4;
+	box-sizing: border-box;
+	padding: 60px;
+	/* Rectangle 24: */
+	color: white;
+	background: #202437;
+	box-shadow: 0px 64px 72px 12px rgba(101,97,97,0.50);
+}
+
+p.top-intro{
+	font-size: 1.944em;
+	letter-spacing: -.31px;
+	/* 35px and 45px line height */
+	line-height: 45px;
+	color: #D54664;
+	font-weight: 400;
+}
+
+p.more-details-info{
+	font-size: 1.111em;
+	letter-spacing: 0px;
+	line-height: 2.22222em;
+	font-weight: 200;
+}
+
+p.top-intro .emphasis{
+	color: white;
+	font-weight: 600;
+}
+
+p.more-details-info .emphasis{
+	color: #D54664;
+	font-weight: 600;
+}
+
+/************ Philosophy ***************/
+
+.philosophy{
+	background-color: #D54664;
+	color: none;
+	margin-bottom: 200px;
+	/*background-color: #F72E47;*/
+}
+
+
+.philosophy-header{
+	position: absolute;
+	left: 250px;
+	top: 100px;
+	color: white;
+}
+
+.philosophy-text-container{
+	position: relative;
+	top: 175px;
+	width: 70%;
+	margin-left: 250px;
+	/*margin: 0 auto;*/
+}
+
+p.philosophy-text{
+	/*font-size: 65px;*/
+	font-size: 3em;
+	left: 100px;
+	color: white;
+	letter-spacing: -2.6px;
+	/*line-height: 110px;*/
+	line-height: 1.5;
+	font-weight: 500;
+}
+
+p.philosophy-text .emphasis{
+	font-weight: 700;
+	color: #1B1E2E;
+}
+
+/************ Featured Work ***************/
+.featured-work{
+	background-color: #F9F7F7;
+	overflow: hidden;
+}
+
+.background-polygon{
+	height: 100%;
+	width: 60%;
+	position: absolute;
+	top: 0;
+	-webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+	background: #EFEFEF;
+	/*background: blue;*/
+}
+
+
+.highlight-text{
+	position: absolute;
+	right: 5%;
+	top: 22%;
+	height: 200px;
+	text-align: center;
+	width: 85%;
+	font-size: 175px;
+	/*background-color: blue;*/
+	color: #D8D6D9;
+	text-transform: uppercase;
+	font-family: "Oswald", "Source Sans Pro", sans-serif;
+}
+
+/*.highlight-box.active{
+	visibility: visible;
+}*/
+
+.rotating-object{
+	/*background-color: blue;*/
+	overflow: visible!important;
+	z-index: 5;
+}
+
+.highlight-background{
+	position: absolute;
+	top: -50px;
+	left: -200px;
+	width: 800px;
+	/*width: 0px;*/
+	height: 300px;
+	background: #202437;
+	opacity: 0;
+	transition: opacity .75s;
+	transition: width .75s;
+}
+
+.rotating-object.coming .highlight-background{
+	box-shadow: 0px 20px 34px 12px rgba(0,0,0,0.43);
+	/*opacity: .1;*/
+}
+
+.rotating-object.active .highlight-background{
+	opacity: 100;
+	box-shadow: 0px 60px 74px 12px rgba(0,0,0,0.43);
+	visibility: visible;
+	width: 800px;
+}
+.dot{
+	background: #D54A67;
+}
+
+.inside-circle{
+	z-index: 10;
+	border-color: #D54A67;
+}
+
+
+.rotating-object .nav-number{
+	color: #D54A67;
+}
+
+.rotating-object.active .nav-number{
+	color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+    	font-size: 12px;
+    }
+
+    .intro-box{
+    	width: 290px;
+    	height: 400px;
+    }
+	
+	.parens{
+		height: 91.3px;
+		width: 70px;
+		margin-bottom: 60px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.pink-box{
+		width: 60%;
+		height: 85%;
+		z-index: 9;
+	}
+
+	.about-content{
+		width: 100%;
+	}
+
+	.parima-photo{
+		width: 300px;
+		height: 300px;
+	}
+
+	.parima-info{
+		width: 300px;
+		height: 300px;
+		padding: 10px;
+	}
+
+	.parima-info .top-intro{
+		line-height: 1.4em;
+	}
+
+	.more-details-info{
+		line-height: 1.2em;
+	}
+
+	.philosophy-header{
+		position: absolute;
+		left: 50px;
+		top: 50px;
+		color: white;
+	}
+
+	.philosophy-text-container{
+		position: relative;
+		top: 100px;
+		width: 80%;
+		margin-left: 50px;
+		/*margin: 0 auto;*/
+	}
+
+	p.philosophy-text{
+		/*font-size: 65px;*/
+		font-size: 3em;
+		left: 100px;
+		color: white;
+		letter-spacing: -2.6px;
+		/*line-height: 110px;*/
+		line-height: 1.5;
+		font-weight: 500;
+	}
+
+	/* featured work */
+
+	.highlight-text{
+		font-size: 70px;
+	}
+
+	.circular-container{
+		left: -1000px!important;
+		top: -350px!important;
+	}
+
+
+	.rotating-object .step{
+		margin-top: -20px;
+		font-size: 20px;
+	}
+
+	.rotating-object .highlight-background{
+		height: 200px;
+		width: 0;
+	}
+
+	.rotating-object.active .highlight-background{
+		height: 200px;
+		width: 100%;
+	}
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 720px) {
+    body{
+    	font-size: 15px;
+    }
+
+    .intro-box{
+    	width: 500px;
+    	height: 400px;
+    }
+	
+	.parens{
+		height: 91.3px;
+		width: 70px;
+		margin-bottom: 60px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	/**** ABOUT ********/
+
+	.pink-box{
+		width: 60%;
+		height: 85%;
+		z-index: 9;
+	}
+
+	.about-content{
+		width: 80%;
+	}
+
+	.parima-photo{
+		width: 300px;
+		height: 300px;
+	}
+
+	.parima-info{
+		width: 300px;
+		height: 400px;
+		padding: 20px;
+	}
+
+	.parima-info .top-intro{
+		font-size: 20px;
+		line-height: 1.4em;
+	}
+
+	.more-details-info{
+		font-size: 15px;
+		line-height: .2em;
+	}
+
+	/**** PHILOSOPHY ********/
+
+	.philosophy-header{
+		position: absolute;
+		left: 50px;
+		top: 50px;
+		color: white;
+	}
+
+	.philosophy-text-container{
+		position: relative;
+		top: 100px;
+		width: 80%;
+		margin-left: 50px;
+		/*margin: 0 auto;*/
+	}
+
+	p.philosophy-text{
+		/*font-size: 65px;*/
+		font-size: 3em;
+		left: 100px;
+		color: white;
+		letter-spacing: -2.6px;
+		/*line-height: 110px;*/
+		line-height: 1.5;
+		font-weight: 500;
+	}
+
+	/* featured work */
+
+	.highlight-text{
+		font-size: 70px;
+	}
+
+	.circular-container{
+		left: -1000px!important;
+		top: -400px!important;
+	}
+
+
+	.rotating-object .step{
+		font-size: 20px;
+	}
+
+	.rotating-object .highlight-background{
+		height: 200px;
+		width: 0;
+	}
+
+	.rotating-object.active .highlight-background{
+		height: 200px;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 721px) and (max-width: 1000px) {
+       body{
+    	font-size: 16px;
+    }
+
+    .intro-box{
+    	width: 600px;
+    	height: 400px;
+    }
+	
+	.parens{
+		height: 91.3px;
+		width: 70px;
+		margin-bottom: 60px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+    /**** ABOUT ********/
+
+	.pink-box{
+		width: 60%;
+		height: 85%;
+		z-index: 9;
+	}
+
+	.about-content{
+		width: 75%;
+	}
+
+	.parima-photo{
+		width: 400px;
+		height: 400px;
+	}
+
+	.parima-info{
+		width: 400px;
+		height: 400px;
+		padding: 20px;
+	}
+
+	.parima-info .top-intro{
+		font-size: 25px;
+		line-height: 1.4em;
+	}
+
+	.more-details-info{
+		font-size: 20px;
+		line-height: .2em;
+	}
+
+	/**** PHILOSOPHY ********/
+
+	.philosophy-header{
+		position: absolute;
+		left: 50px;
+		top: 50px;
+		color: white;
+	}
+
+	.philosophy-text-container{
+		position: relative;
+		top: 100px;
+		width: 90%;
+		margin-left: 50px;
+		/*margin: 0 auto;*/
+	}
+
+	p.philosophy-text{
+		/*font-size: 65px;*/
+		font-size: 3em;
+		left: 100px;
+		color: white;
+		letter-spacing: -2.6px;
+		/*line-height: 110px;*/
+		line-height: 1.5;
+		font-weight: 500;
+	}
+
+	.highlight-text{
+		font-size: 90px;
+	}
+
+	.circular-container{
+		left: -1000px!important;
+		top: -450px!important;
+	}
+
+
+	.rotating-object .step{
+		font-size: 25px;
+		margin-top: -75px;
+	}
+
+	.rotating-object .highlight-background{
+		height: 200px;
+		width: 0;
+	}
+
+	.rotating-object.active .highlight-background{
+		height: 200px;
+		width: 100%;
+	}
+
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1300px) {
+/**** PHILOSOPHY ********/
+
+	.philosophy-header{
+		position: absolute;
+		left: 75px;
+		top: 50px;
+		color: white;
+	}
+
+	.philosophy-text-container{
+		position: relative;
+		top: 100px;
+		width: 90%;
+		margin-left: 75px;
+		/*margin: 0 auto;*/
+	}
+
+	p.philosophy-text{
+		/*font-size: 65px;*/
+		font-size: 3em;
+		left: 100px;
+		color: white;
+		letter-spacing: -2.6px;
+		/*line-height: 110px;*/
+		line-height: 1.5;
+		font-weight: 500;
+	}
+
+		.highlight-text{
+		font-size: 110px;
+	}
+
+	.circular-container{
+		left: -1000px!important;
+		top: -500px!important;
+	}
+
+
+	.rotating-object .step{
+		font-size: 25px;
+		margin-top: -75px;
+	}
+
+	.rotating-object .highlight-background{
+		height: 300px;
+		width: 0;
+	}
+
+	.rotating-object.active .highlight-background{
+		height: 300px;
+		width: 100%;
+	}
+
+}
+

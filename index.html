@@ -7,12 +7,14 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
 
+    <!-- <script type="text/javascript" src="js/roll.js"></script> --> 
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,400italic,300italic|Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
-
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,31 +27,71 @@
       <ul>
         <li class="active"><a href="#introduction">01<!-- <span class="nav-line"></span> --></a></li>
         <li><a href="#about">02</a></li>
-        <li><a href="#about">03</a></li>
-        <li><a href="#about">04</a></li>
+        <li><a href="#web-apps">03</a></li>
       </ul>
     </nav>
-    <section id="introduction">
-      <div class = "introduction-background">
-        <div class = "brand">
+    <div class = "page-container">
+      <section id="introduction" class="step">
+        <div class = "introduction-background">
+          <div class = "brand">
+          </div>
         </div>
-      </div>
-    </section>
-    <section id="about">
-      <div class = "about-background">
-        <div class = "about-text">
+      </section>
+      <section id="about" class="step">
+        <div class = "about-background">
+          <div class = "about-text">
+          </div>
         </div>
+      </section>
+      <section id="web-apps" class="step">
+        <div class = "web-apps-background">
+            <h1>Web Applications</h1>
+        </div>
+      </section>
+    </div>
+
+
+
+    <!-- for Roll.js --> 
+
+   <!--  <div id ="roll">
+      <div id="steps">
+        <section id="introduction" class="step">
+          <div class = "introduction-background">
+            <div class = "brand">
+            </div>
+          </div>
+        </section>
+        <section id="about" class="step">
+          <div class = "about-background">
+            <div class = "about-text">
+            </div>
+          </div>
+        </section>
+        <section id="web-apps" class="step">
+          <div class = "web-apps-background">
+          </div>
+        </section>
       </div>
-    </section>
-    <section id="web-apps">
-      <div class = "web-apps-background">
+      <div id="wrapper">
+        <div id="pane"></div>
       </div>
-    </section>
+     </div> -->
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- waypoints jQuery plugin by http://imakewebthings.com/ : http://imakewebthings.com/jquery-waypoints/ -->
+    <script src="js/waypoints.min.js"></script>
+    <!-- jquery-smartresize by @louis_remi : https://github.com/louisremi/jquery-smartresize -->
+    <script src="js/jquery.debouncedresize.js"></script>
+    <script src="js/cody-scroll.js"></script>
+
+
+
+    <!-- <script type="text/javascript" src="js/roll-test.js"></script> -->
   </body>
 </html>

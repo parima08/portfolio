@@ -1,0 +1,57 @@
+/********* ROLL JS CSS ******************** */
+#roll {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+
+
+/* this is the viewport container */
+#wrapper {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#steps{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.step {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  /* optional transition */
+  transition: top .5s;
+}
+
+
+/* what's the styles for previous steps */
+.step.prev {
+  top: -100%;
+}
+
+
+/* what's the styles for next steps */
+.step.next {
+  top: 100%;
+}
+
+
+/* what's the styles for current steps */
+.step.curr {
+  top: 0;
+}
