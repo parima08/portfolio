@@ -27,7 +27,7 @@
     <![endif]-->
   </head>
   <body>
-
+  <div class = "viewport">
     <div id="pinContainer">
       <section class = "panel intro">
         <div class = "intro-box">
@@ -74,11 +74,18 @@
         <div class = "highlight-text">Blah blah blah</div>
          <div class = "circular-container">
           <div class="rotating-object first active">
-            <div class = "highlight-background"></div> 
+            <div class = "highlight-background"></div>
+            <div class = "round-button"></div>
             <div class = "dot"></div>
             <div class="step"> 
               <span class="nav-number">00.</span> 
               <span class= "nav-title">Network Security</span>
+               <div class = "description-text">
+                Implemented a data visualization tool in order to better visualize, 
+                understand, and explain the back-end service. Written in Javascript, 
+                using the  D3 Library, this tool created an interactive,
+                graphic version of a network topology on fly. 
+              </div>
             </div>
           </div>
            <div class = "rotating-object second coming">
@@ -87,6 +94,9 @@
             <div class="step">
             <span class="nav-number"> 01. </span> 
             <span class= "nav-title">Smart Lock </span>
+            <div class = "description-text">
+              Worked to create a Ruby on Rails integration server in an internet-of-things project in which mobile applications were required to communicate and control hardware through our Restful API.
+            </div>
           </div>
           </div>
            <div class = "rotating-object third">
@@ -95,6 +105,9 @@
             <div class="step">
               <span class="nav-number">02.</span>
               <span class="nav-title"> Micron </span>
+              <div class = "description-text">
+                Created a fifty page web portal in using the full web stack. The backend was implemented in Ruby on Rails and MySQL with HTML, CSS, Javascript, and  Responsive Design on the front-end. I wrote an HTML parser in Ruby. Website live at: www.micronautomata.com
+              </div>
             </div>
           </div>
            <div class = "rotating-object fourth">
@@ -116,6 +129,7 @@
           <div class="inside-circle"></div>
         </div>
       </section>
+    </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -167,7 +181,8 @@
           .fromTo(".circular-container", 1, {rotation: 0}, {rotation: -30}) 
           .fromTo(".circular-container", 1, {rotation: -30}, {rotation: -60})
           .fromTo(".circular-container", 1, {rotation: -60}, {rotation: -90})
-          .fromTo(".circular-container", 1, {rotation: -90}, {rotation: -120});
+          .fromTo(".circular-container", 1, {rotation: -90}, {rotation: -120})
+          .fromTo(".circular-container", 1, {rotation: -120}, {rotation: -160});
 
           //console.log( $(".circular-container")[0]._gsTransform.rotation );
           // $(document).on("scroll", ".featured-work", function(){
@@ -180,7 +195,7 @@
         var scrollMagicScene = new ScrollMagic.Scene({
             triggerElement: "#pinContainer",
             triggerHook: "onLeave",
-            duration: "500%"
+            duration: "1000%"
           })
           .setPin("#pinContainer")
           .setTween(wipeAnimation)
