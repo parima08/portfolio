@@ -15,12 +15,21 @@ h1{
 	overflow: scroll;
 }
 
+
 #pinContainer {
 	width: 100%;
 	height: 100%;
 	background: blue;
 	overflow: hidden;
 }
+
+#pinContainer2 {
+	width: 100%;
+	height: 100%;
+	background: red;
+	overflow: hidden;
+}
+
 .panel {
 	height: 100%;
 	width: 100%;
@@ -376,6 +385,15 @@ p.philosophy-text .emphasis{
 	font-family: "Oswald", "Source Sans Pro", sans-serif;
 }
 
+#project-content{
+	z-index: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: scroll;
+	background: rgba(0,0,0,.3);
+}
+
 /*.highlight-box.active{
 	visibility: visible;
 }*/
@@ -388,10 +406,10 @@ p.philosophy-text .emphasis{
 
 .highlight-background{
 	position: absolute;
-	top: -50px;
+	top: 0px;
 	left: -200px;
 	width: 800px;
-	/*width: 0px;*/
+	width: 0px;
 	height: 300px;
 	background: #202437;
 	opacity: 0;
@@ -428,17 +446,55 @@ p.philosophy-text .emphasis{
 	color: white;
 }
 
-.description-text{
-	font-size: .6em;
+.rotating-object .description-text{
+	font-size: .4em;
 	margin-top: 15px;
-	width: 65%;
+	width: 100%;
 	line-height: 30px;
 	font-weight: 300;
+	color: rgba(255, 255, 255, 0);
+	transition: color .75s;
 }
 
-.round-button{
-	
+.rotating-object.active .description-text{
+	color: rgba(255, 255, 255, .7);
 }
+
+.rotating-object .step{
+	width: 70%;
+}
+
+.rotating-object .round-button{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(40%, 30%);
+	background: #D54664;
+	opacity: 0;
+	border-radius: 50%;
+	box-shadow: 0px 13px 13px 0px rgba(0,0,0,0.25);
+	color: white;
+	text-align: center;
+	transition: opacity .5s;
+	transition-delay: .75s;
+	box-sizing: border-box;
+	padding-top: 35px;
+	font-size: 1.6em;
+}
+
+.rotating-object.active .round-button{
+	opacity: 1;
+}
+
+/*.rotating-object .round-button p.featured-work-details{
+	font-size: 1.6em;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 25%;
+}*/
 
 @media only screen and (max-width: 600px) {
     body{
@@ -522,6 +578,7 @@ p.philosophy-text .emphasis{
 	.circular-container{
 		left: -1000px!important;
 		top: -350px!important;
+		transform: rotate(0deg);
 	}
 
 
@@ -538,6 +595,12 @@ p.philosophy-text .emphasis{
 	.rotating-object.active .highlight-background{
 		height: 200px;
 		width: 100%;
+	}
+
+	.rotating-object .description-text{
+		line-height: 1.5em;
+		width: 45%;
+		font-size: 10px;
 	}
 }
 
@@ -649,6 +712,12 @@ p.philosophy-text .emphasis{
 		width: 100%;
 		top: 0px;
 	}
+
+	.rotating-object .description-text{
+		line-height: 1.5em;
+		width: 50%;
+		font-size: 12px;
+	}
 }
 
 @media only screen and (min-width: 721px) and (max-width: 1000px) {
@@ -746,6 +815,7 @@ p.philosophy-text .emphasis{
 	}
 
 	.rotating-object .highlight-background{
+		margin-top: -25px;
 		height: 200px;
 		width: 0;
 	}
@@ -753,6 +823,12 @@ p.philosophy-text .emphasis{
 	.rotating-object.active .highlight-background{
 		height: 200px;
 		width: 100%;
+	}
+
+	.rotating-object .description-text{
+		line-height: 1.5em;
+		width: 60%;
+		font-size: 14px;
 	}
 
 }
@@ -812,5 +888,12 @@ p.philosophy-text .emphasis{
 		width: 100%;
 	}
 
+}
+
+@media only screen and (min-width: 1301px) {
+
+	.description-text{
+		font-size: .4em;
+	}
 }
 
