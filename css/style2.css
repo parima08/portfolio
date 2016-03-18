@@ -24,9 +24,8 @@ body{
 
 .circle{
 	position: absolute;
-	 top: 0; left: 0%; bottom: 0; right: 0;
+	  top: 0; left: 0%; bottom: 0; right: 0;
   	margin: auto;
-	
     transform: translate3d(0px, 0px, 0px);
     border: 10px solid rgb(212, 212, 212);
     height: 300px;

@@ -10,7 +10,7 @@
     <!-- <script type="text/javascript" src="js/roll.js"></script> --> 
 
     <!-- Bootstrap -->
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="css/bootstrap.min.css rel="stylesheet"> -->
     <link href="css/style2.css" rel="stylesheet">
     <link href="css/style3.css" rel="stylesheet">
 
@@ -27,9 +27,41 @@
     <![endif]-->
   </head>
   <body>
-    <section class = "newtork-security">
-      <h1>Network Security</h1>
-      <h1><a>X</a></h1>
+    <main>
+    <section class = "panel featured-work network-security">
+    <a class = "close"> X close </a>
+        <div class = "project-text">  
+           
+          <div class = "the-content">
+          <p>Prima primis similique cum in, ad per duis novum sanctus. Graeci antiopam evertitur id vim. Quem delicatissimi in sea, vix ea mentitum appetere, quo quaeque intellegebat signiferumque at. An quem natum iracundia mea. At munere nonumes insolens mea, quo velit dictas offendit ea.</p>
+
+          <p>No elit affert quaeque sea, ius in detracto voluptua vulputate. Essent latine accusam no usu, mei erroribus similique at, ea quo eruditi consulatu. No nam alienum hendrerit, cum nulla aeterno an. Nihil facete eripuit pro eu, ponderum adversarium nec in, iuvaret tibique theophrastus quo in. Quem probo mediocritatem an pro, sea eleifend dignissim ad, cu ponderum inimicus pri.</p>
+
+          <p>Enim recteque vis te, has ex augue latine utroque. Iusto ignota possit mel at. Esse cetero quo cu, ne eam habeo repudiandae. Eam at periculis tincidunt, natum labitur philosophia nam ad. Id aperiri referrentur nam.</p>
+
+          <p>Hinc harum sonet usu at, etiam erant eum ea. Cu eam mucius aperiri fabulas, ei qui porro moderatius, ad eligendi singulis interesset per. Usu viris blandit ei, legimus vivendum referrentur ad mel, sed impedit platonem sapientem ea. Laoreet definiebas nec no, pri ut erant efficiendi.Lorem ipsum dolor sit amet, alii modo usu in. Posse nominavi inciderint sea ea. Eam cu fastidii officiis, te ius invenire expetenda. Mei an ridens virtute legendos, nec te viris copiosae signiferumque. Et labore verear pri, ne mea eius debet causae, ex sonet congue persecuti quo.</p>
+
+          <p>Prima primis similique cum in, ad per duis novum sanctus. Graeci antiopam evertitur id vim. Quem delicatissimi in sea, vix ea mentitum appetere, quo quaeque intellegebat signiferumque at. An quem natum iracundia mea. At munere nonumes insolens mea, quo velit dictas offendit ea.</p>
+
+          <p>No elit affert quaeque sea, ius in detracto voluptua vulputate. Essent latine accusam no usu, mei erroribus similique at, ea quo eruditi consulatu. No nam alienum hendrerit, cum nulla aeterno an. Nihil facete eripuit pro eu, ponderum adversarium nec in, iuvaret tibique theophrastus quo in. Quem probo mediocritatem an pro, sea eleifend dignissim ad, cu ponderum inimicus pri.</p>
+
+          <p>Enim recteque vis te, has ex augue latine utroque. Iusto ignota possit mel at. Esse cetero quo cu, ne eam habeo repudiandae. Eam at periculis tincidunt, natum labitur philosophia nam ad. Id aperiri referrentur nam.</p>
+
+          </div>
+        </div>
+
     </section>
+    </main>
+    <script>
+      $(function(){
+        $(".close").on("click", function(){
+          alert("Clicked close");
+          var blah = new TimelineMax()
+            .fromTo("#project-content", 1, {x: "100%"} , {x: "0%"})
+            .fromTo(".circular-container", 1, {x: "-100%"} , {x: "0%"});
+           wipeAnimation.play();
+        });
+      });
+    </script>
   </body>
 </html>

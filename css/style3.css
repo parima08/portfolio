@@ -391,7 +391,7 @@ p.philosophy-text .emphasis{
 	height: 100%;
 	width: 100%;
 	overflow: scroll;
-	background: rgba(0,0,0,.3);
+	/*background: rgba(0,0,0,.3);*/
 }
 
 /*.highlight-box.active{
@@ -447,7 +447,7 @@ p.philosophy-text .emphasis{
 }
 
 .rotating-object .description-text{
-	font-size: .4em;
+	font-size: .6em;
 	margin-top: 15px;
 	width: 100%;
 	line-height: 30px;
@@ -495,6 +495,85 @@ p.philosophy-text .emphasis{
 	position: relative;
 	top: 25%;
 }*/
+
+/*********** Individual Project Page **********/
+
+.network-security{
+	overflow: scroll;
+	background: transparent;
+	padding-bottom: 200px;
+}
+
+.project-text{
+	width: 70%;
+	margin: 0 auto;
+
+}
+
+.the-content{
+	position: relative;
+	margin-top: 30%;
+	z-index: 1000;
+}
+
+a.close{
+	position: absolute;
+	/*top: -50px;*/
+	z-index: 2000;
+	mouse: pointer;
+}
+
+
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: transparent;
+	/*background: rgba(153,204,51,0.9);
+	background: rgba(153,204,51,1);*/
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
+	transition: transform 0.5s, visibility 0s 0.5s;
+	overflow: scroll;
+}
+
+.overlay::after {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.overlay.open {
+	visibility: visible;
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	overflow: hidden;
+	border: none;
+	background: url('../img/cross.png') no-repeat center center;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 100;
+}
+
 
 @media only screen and (max-width: 600px) {
     body{
@@ -716,7 +795,7 @@ p.philosophy-text .emphasis{
 	.rotating-object .description-text{
 		line-height: 1.5em;
 		width: 50%;
-		font-size: 12px;
+		font-size: 16px;
 	}
 }
 
@@ -790,7 +869,7 @@ p.philosophy-text .emphasis{
 
 	p.philosophy-text{
 		/*font-size: 65px;*/
-		font-size: 3em;
+		font-size: 4em;
 		left: 100px;
 		color: white;
 		letter-spacing: -2.6px;
@@ -828,7 +907,7 @@ p.philosophy-text .emphasis{
 	.rotating-object .description-text{
 		line-height: 1.5em;
 		width: 60%;
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 }
@@ -888,12 +967,16 @@ p.philosophy-text .emphasis{
 		width: 100%;
 	}
 
+	.rotating-object .description-text{
+		font-size: 14px;
+	}
+
 }
 
 @media only screen and (min-width: 1301px) {
 
-	.description-text{
-		font-size: .4em;
+	.rotating-object .description-text{
+		font-size: 16px;
 	}
 }
 
