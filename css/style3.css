@@ -407,14 +407,14 @@ p.philosophy-text .emphasis{
 .highlight-background{
 	position: absolute;
 	top: 0px;
-	left: -200px;
+	left: -400px;
 	width: 800px;
-	width: 0px;
+	width: 800px;
 	height: 300px;
 	background: #202437;
 	opacity: 0;
 	transition: opacity .75s;
-	transition: width .75s;
+	transition: left .75s;
 }
 
 .rotating-object.coming .highlight-background{
@@ -426,6 +426,7 @@ p.philosophy-text .emphasis{
 	opacity: 100;
 	box-shadow: 0px 60px 74px 12px rgba(0,0,0,0.43);
 	visibility: visible;
+	left: -200px;
 	width: 800px;
 }
 .dot{
@@ -487,6 +488,50 @@ p.philosophy-text .emphasis{
 .rotating-object.active .round-button{
 	opacity: 1;
 }
+
+.rotating-object .description-text{
+	font-size: .6em;
+	margin-top: 15px;
+	width: 100%;
+	line-height: 30px;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0);
+	transition: color .75s;
+}
+
+.rotating-object.active .description-text{
+	color: rgba(255, 255, 255, .7);
+}
+
+.rotating-object .step{
+	width: 70%;
+}
+
+.rotating-object .round-button{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(40%, 30%);
+	background: #D54664;
+	opacity: 0;
+	border-radius: 50%;
+	box-shadow: 0px 13px 13px 0px rgba(0,0,0,0.25);
+	color: white;
+	text-align: center;
+	transition: opacity .5s;
+	transition-delay: .75s;
+	box-sizing: border-box;
+	padding-top: 35px;
+	font-size: 1.6em;
+}
+
+.rotating-object.active .round-button{
+	opacity: 1;
+}
+
+
 
 /*.rotating-object .round-button p.featured-work-details{
 	font-size: 1.6em;
